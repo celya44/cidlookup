@@ -2,14 +2,15 @@
 	<rawname>cidlookup</rawname>
 	<repo>standard</repo>
 	<name>CallerID Lookup</name>
-	<version>17.0.1.1</version>
-	<publisher>Sangoma Technologies Corporation</publisher>
+	<version>17.50.1</version>
+	<publisher>Celya</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<description>Allows CallerID Lookup of incoming calls against different sources (OpenCNAM, MySQL, HTTP, ENUM, Phonebook Module)</description>
-  	<more-info>https://sangomakb.atlassian.net/wiki/spaces/PG/pages/19991124/PBX+GUI+-+CallerID+Lookup+Sources+Module</more-info>
+  	<more-info>https://wiki.freepbx.org/display/F2/CallerID+Lookup+Sources+Module</more-info>
 	<category>Admin</category>
 	<changelog>
+		*17.50.1* 20280924 * Prise en charge par Celya pour optimiser la recherche inverse dans l'agi contactmanager.agi
 		*17.0.1.1* 17.0.1.1  release
 	</changelog>
 	<menuitems>
