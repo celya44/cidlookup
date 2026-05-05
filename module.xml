@@ -2,7 +2,7 @@
 	<rawname>cidlookup</rawname>
 	<repo>standard</repo>
 	<name>CallerID Lookup</name>
-	<version>17.50.1</version>
+	<version>17.50.2</version>
 	<publisher>Celya</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -10,7 +10,8 @@
   	<more-info>https://wiki.freepbx.org/display/F2/CallerID+Lookup+Sources+Module</more-info>
 	<category>Admin</category>
 	<changelog>
-		*17.50.1* 20280924 * Prise en charge par Celya pour optimiser la recherche inverse dans l'agi contactmanager.agi
+		*17.50.2* 20260505 * contactmanager.agi : Correction d un bug et optimisation de la requete SQL
+		*17.50.1* 20250924 * Prise en charge par Celya pour optimiser la recherche inverse dans l agi contactmanager.agi
 		*17.0.1.1* 17.0.1.1  release
 	</changelog>
 	<menuitems>

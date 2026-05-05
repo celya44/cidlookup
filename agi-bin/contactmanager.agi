@@ -24,11 +24,25 @@ $quickResults = [];
 
 if(!empty($groups) && !empty($number)){
     foreach($groups as $group){
-        $sql = "SELECT * FROM contactmanager_entry_numbers n, contactmanager_group_entries e, contactmanager_groups g WHERE g.owner = -1 AND g.id = :groupid AND g.id = e.groupid AND n.entryid = e.id AND n.stripped AND ((n.stripped LIKE :strippedlike AND CHAR_LENGTH(n.stripped) >= :lookuplength) OR (n.stripped = :stripped) OR (n.number = :stripped) )";
+        $sql = "SELECT * FROM contactmanager_entry_numbers n, contactmanager_group_entries e, contactmanager_groups g
+WHERE g.owner = -1
+AND g.id = :groupid
+AND g.id = e.groupid
+AND n.entryid = e.id
+AND n.stripped
+AND (
+  (n.number = :stripped)
+  OR (n.stripped = :stripped)
+  OR (
+    n.stripped LIKE :strippedlike
+    AND CHAR_LENGTH(n.stripped) >= :lookuplength
+    AND CHAR_LENGTH(:stripped) >= :lookuplength
+  )
+)";
         $sth = $db->prepare($sql);
         $sth->execute(array(
             ":groupid" => $group,
-            ":strippedlike" => '%'.$number.'%',
+            ":strippedlike" => '%'.$number,
             ":stripped" => $number,
             ":lookuplength" => $lookuplen
          ));
